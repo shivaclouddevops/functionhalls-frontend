@@ -1,0 +1,62 @@
+<!-- =========================================================
+                      FUNCTION HALL LIST
+=========================================================== -->
+<div class="column-layout">
+    <div class="main-column">
+        <div *ngFor="let item of data" (click)="moreInfo(item.ownerId)">
+            <div class="Hit media-flex media-flex--left media-flex--xs" data-wdio="hit" role="listitem">
+                <!-- =========================================================
+                      FUNCTION HALL IMAGE VIEW 
+              =========================================================== -->
+                    <a style="cursor:pointer" class="list-group-item clearfix" routerLinkActive="active" [routerLink]="[item]">    
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{item.imageUrl[0]}}" class="card-img"
+                            style="width: 220px; height: 220px; padding-top: 20px;" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="media-flex__body">
+                                <h2 class="HitInfo__headline hover-text" aria-hidden="true" style="margin-top: 20px;">
+                                    {{ item.name }}</h2>
+                                <div class="HitInfo__details">
+                                    <div class="Details__propertyType Details__label" aria-hidden="true" style="margin-top: -20px;"><b>Owner:</b>
+                                        {{ item.ownerFirstName }}</div>
+                                </div>
+                                <div class="HitInfo__details">
+                                    <div class="Details__functionhalls Details__label" aria-hidden="true" >
+                                       <b>Address:</b> <br>{{ item.street }},<br>{{ item.city }},<br>{{ item.state }},<br>{{ item.zipcode }}.
+                                    </div>
+                                </div>
+<!-- =========================================================
+          BOOK  FUNCTION HALL  
+=========================================================== -->
+                                <div class="HitInfo__labels">
+                                    <div class="" role="presentation"
+                                        style="display: inline-block; outline: 0px; position: relative;">
+                                        <span role="presentation"
+                                            class="HitInfo__labels_item label label-default label-49">Book
+                                            This Function
+                                            Hall</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-column">
+        <div class="card" style="width:400px">
+            <div class="col-sm-6" style="background-color:rgba(243, 243, 243, 0.301);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121809.54019297498!2d78.41482690637235!3d17.43345993609042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9842f7d4f3a3%3A0xcc9b0973e39c8e17!2sMaharaja%20Function%20Hall!5e0!3m2!1sen!2sin!4v1592763578547!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.2831298801484!2d78.4929877147779!3d17.589285201580626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8595025e3bcb%3A0x7eed7e9345a79dad!2sNimmala%20Gardens!5e0!3m2!1sen!2sin!4v1593457779039!5m2!1sen!2sin"
+                    width="600" height="800" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
