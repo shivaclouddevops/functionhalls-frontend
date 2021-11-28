@@ -1,4 +1,4 @@
-import { PhotosService } from 'src/app/OwnerModule/services/Photos.service';
+import { PhotosService } from 'src/app/OwnerModule/services/photos.service';
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
